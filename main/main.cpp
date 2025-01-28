@@ -16,4 +16,6 @@ int main() {
 	rootCoordinator.start();
 	rootCoordinator.simulate(10.0);
 	rootCoordinator.stop();	
+
+	return 0;
 }
