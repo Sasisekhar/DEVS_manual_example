@@ -1,4 +1,4 @@
-main/CMakeFiles/sample_project.dir/main.cpp.o: \
+main/CMakeFiles/top.dir/main.cpp.o: \
  /home/sasi/manual_example_model/main/main.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/13/limits \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \

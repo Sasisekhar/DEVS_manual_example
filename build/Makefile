@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named sample_project
+# Target rules for targets named top
 
 # Build rule for target.
-sample_project: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sample_project
-.PHONY : sample_project
+top: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 top
+.PHONY : top
 
 # fast build rule for target.
-sample_project/fast:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/sample_project.dir/build.make main/CMakeFiles/sample_project.dir/build
-.PHONY : sample_project/fast
+top/fast:
+	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/top.dir/build.make main/CMakeFiles/top.dir/build
+.PHONY : top/fast
 
 # Help Target
 help:
@@ -137,7 +137,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... sample_project"
+	@echo "... top"
 .PHONY : help
 
 

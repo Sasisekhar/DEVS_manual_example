@@ -117,25 +117,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-main/CMakeFiles/sample_project.dir/rule:
-	cd /home/sasi/manual_example_model/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/sample_project.dir/rule
-.PHONY : main/CMakeFiles/sample_project.dir/rule
+main/CMakeFiles/top.dir/rule:
+	cd /home/sasi/manual_example_model/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/top.dir/rule
+.PHONY : main/CMakeFiles/top.dir/rule
 
 # Convenience name for target.
-sample_project: main/CMakeFiles/sample_project.dir/rule
-.PHONY : sample_project
+top: main/CMakeFiles/top.dir/rule
+.PHONY : top
 
 # fast build rule for target.
-sample_project/fast:
-	cd /home/sasi/manual_example_model/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/sample_project.dir/build.make main/CMakeFiles/sample_project.dir/build
-.PHONY : sample_project/fast
+top/fast:
+	cd /home/sasi/manual_example_model/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/top.dir/build.make main/CMakeFiles/top.dir/build
+.PHONY : top/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/sasi/manual_example_model/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/sample_project.dir/build.make main/CMakeFiles/sample_project.dir/main.cpp.o
+	cd /home/sasi/manual_example_model/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/top.dir/build.make main/CMakeFiles/top.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -143,7 +143,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/sasi/manual_example_model/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/sample_project.dir/build.make main/CMakeFiles/sample_project.dir/main.cpp.i
+	cd /home/sasi/manual_example_model/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/top.dir/build.make main/CMakeFiles/top.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -151,7 +151,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/sasi/manual_example_model/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/sample_project.dir/build.make main/CMakeFiles/sample_project.dir/main.cpp.s
+	cd /home/sasi/manual_example_model/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/top.dir/build.make main/CMakeFiles/top.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -162,7 +162,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... sample_project"
+	@echo "... top"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

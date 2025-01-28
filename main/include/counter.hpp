@@ -16,7 +16,7 @@ struct counterState {
 };
 
 //This part is required to tell cadmium how to print out your state set. As you can see,
-//we are asking cadmium to print {count: <count value>, increment: <increment value>}
+//we are asking cadmium to print {count: /count value/, increment: /increment value/}
 std::ostream& operator<<(std::ostream &out, const counterState& state) {
     out  << "{count: " << state.count << ", increment: " << state.increment << "}"; 
     return out;
@@ -35,7 +35,8 @@ class counter: public Atomic<counterState> {
       increment_in = addInPort<int>("increment_in"); //Set it to input port
     }
 
-    //You should be able to figure out the logic here.
+    //Every ta(s) I want to either increment or decrement count by
+    //the magnitude of state.increment.
     void internalTransition(counterState& state) const override {
       if(state.countUp) {
         state.count += state.increment;
@@ -47,10 +48,10 @@ class counter: public Atomic<counterState> {
     // external transition
     void externalTransition(counterState& state, double e) const override {
         if(!direction_in->empty()){
-            state.countUp = direction_in->getBag().back(); //I only care about the last value
+          state.countUp = direction_in->getBag().back(); //I only care about the last value
         }
         if(!increment_in -> empty()) {
-            state.increment = increment_in->getBag().back();
+          state.increment = increment_in->getBag().back();
         }
         state.sigma -= e; //Why do you think this is significant?
     }

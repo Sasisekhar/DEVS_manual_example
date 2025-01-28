@@ -148,7 +148,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=sample_project
+CMAKE_PROJECT_NAME:STATIC=top
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -219,13 +219,13 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 SIM:BOOL=ON
 
 //Value Computed by CMake
-sample_project_BINARY_DIR:STATIC=/home/sasi/manual_example_model/build
+top_BINARY_DIR:STATIC=/home/sasi/manual_example_model/build
 
 //Value Computed by CMake
-sample_project_IS_TOP_LEVEL:STATIC=ON
+top_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-sample_project_SOURCE_DIR:STATIC=/home/sasi/manual_example_model
+top_SOURCE_DIR:STATIC=/home/sasi/manual_example_model
 
 
 ########################

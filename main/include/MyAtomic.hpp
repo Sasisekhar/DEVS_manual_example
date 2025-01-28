@@ -16,7 +16,7 @@ struct MyAtomicState{
 
 
 //This part is required to tell cadmium how to print out your state set. As you can see,
-//we are asking cadmium to print {count: <count value>, increment: <increment value>}
+//we are asking cadmium to print {sv1: /sv1 value/, sv2: /sv2 value/}
 std::ostream& operator<<(std::ostream &out, const MyAtomicState& state) {
   out  << "{sv1: " << state.sv1 << ", sv2: " << state.sv2 << "}"; 
   return out;
@@ -45,15 +45,14 @@ class MyAtomic: public Atomic<MyAtomicState> {
     // external transition
     void externalTransition(MyAtomicState& state, double e) const override {
       if(!inIntegers->empty()){
-        state.sv1 = inIntegers -> getBag().back();
-        state.input_arrived = true;	
+        state.sv1 = inIntegers -> getBag().back();	
       }
+      state.input_arrived = true;
     }
         
        
     // output function
     void output(const MyAtomicState& state) const override {
-      // Here, we can add message to output ports.
       outFloat->addMessage(state.sv2);
     }
 
