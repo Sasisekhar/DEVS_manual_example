@@ -1,9 +1,10 @@
-# Blank Cadmium Project (RT)
+# DEVS Manual Example (RT)
 |  Linux | Windows| ESP32 | MSP432 |
 |:--|:--|:--|:--|
-|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:question:|
+|:heavy_check_mark:|:heavy_check_mark:|:x:|:x:|
+
 ## Introduction
-This is a blank project that you can use as a template to start off your DEVS models. This project consits of a template atomic and coupled model.
+NOT YET MODIFIED TO REFLECT WHAT IS IN THE REPO.
 
 ## Dependencies
 This project assumes that you have Cadmium installed in a location accessible by the environment variable $CADMIUM.
