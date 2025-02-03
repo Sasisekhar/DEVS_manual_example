@@ -1,5 +1,5 @@
 # Link main file to executable namee
-add_executable(fractional_counter_display main_display.cpp)
+add_executable(fractional_counter_display main_frac_count_display.cpp)
 add_executable(fractional_counter main_frac_counter.cpp)
 add_executable(counter_coupled main_counter.cpp)
 

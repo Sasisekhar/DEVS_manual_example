@@ -7,9 +7,9 @@
 
 using namespace cadmium;
 
-struct display_count: public Coupled {
+struct display_frac_count: public Coupled {
 
-  display_count(const std::string& id): Coupled(id){
+  display_frac_count(const std::string& id): Coupled(id){
 
     auto frac_counter = addComponent<fractional_counter>("fractional counter model");
     auto display_model = addComponent<display>("display model");

@@ -4,11 +4,11 @@
 |:heavy_check_mark:|:heavy_check_mark:|:x:|:x:|
 
 ## Introduction
-NOT YET MODIFIED TO REFLECT WHAT IS IN THE REPO.
+This repository contains the code for the Cadmium Manual
 
 ## Dependencies
 This project assumes that you have Cadmium installed in a location accessible by the environment variable $CADMIUM.
-_This dependency would be met by default if you are using the ARSLAB servers. To check, try `echo $CADMIUM` in the terminal_
+_This dependency would be met by default if you are using the DEVSsim servers. To check, try `echo $CADMIUM` in the terminal_
 
 ## Build
 To build this project, run:
@@ -17,28 +17,38 @@ source build_sim.sh
 ```
 __NOTE__: Everytime you run build_sim.sh, the contents of `build/` and `bin/` will be replaced.
 
-To build this project for the ESP32, run:
-```sh
-source build_esp.sh
-```
-
 ## Execute
-To run the project, run:
+To run the three models in this project, run:
 ```sh
-./bin/sample_project
+./bin/counter_coupled
+./bin/fractional_counter
+./bin/fractional_counter_display
 ```
 
-To flash the project onto the esp32, run:
-```sh
-idf.py -p $ESP_PORT flash
+## Repository structure
+This repository is arranged in the following manner:
+
+```cpp
+.
+├── build_sim.sh    //script file to build the models
+├── CMakeLists.txt  //CMake configuration for the project
+├── main            //main folder containing the code
+│   ├── CMakeLists.txt  //CMake configuration for the project
+│   ├── include         //include folder containing all the models
+│   │   ├── counter_coupled.hpp     //coupled model with only counter
+│   │   ├── counter.hpp             //counter atomic model
+│   │   ├── display_frac_count.hpp  //2-level coupled model
+│   │   ├── display.hpp             //display atomic model
+│   │   ├── fractional_counter.hpp  //single level coupled model
+│   │   └── int_to_float.hpp        //atomic model that converts int to float
+│   ├── main_counter.cpp            //main file to simulate counter coupled
+│   ├── main_frac_count_display.cpp //main file to simulate 2-level coupled
+│   └── main_frac_counter.cpp       //main file to simulate 1-level coupled
+├── cadmium_manual_models.png       //diagram of the models in this repo
+└── README.md                       //this file
 ```
 
-## Modify
-You can modify this project per your requirement. Change the project name defined in the topmost CMakeLists.txt file here:
-```cmake
-set(projectName "sample_project")
-```
-If you want to add other include directories, add the following to the CMakeLists.txt file in the `main` directory:
-```cmake
-target_include_directories(${projectName} PRIVATE "/path/to/dependency")
-```
+## Coupled models in this repository
+
+![model diagram](cadmium_manual_models.png "Coupled model diagram")
+The figure above shows the diagram of the three models included in the repo.
