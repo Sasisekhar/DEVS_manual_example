@@ -42,7 +42,8 @@ class counter: public Atomic<counterState> {
         state.count += state.increment;
       } else {
         state.count -= state.increment;
-      }  
+      } 
+      state.sigma = 1.0;
     }
 
     // external transition

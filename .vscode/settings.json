@@ -70,5 +70,6 @@
         "variant": "cpp",
         "list": "cpp",
         "set": "cpp"
-    }
+    },
+    "C_Cpp.default.compilerPath": "/usr/bin/g++"
 }

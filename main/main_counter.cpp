@@ -15,7 +15,7 @@ int main() {
 	// rootCoordinator.setLogger<CSVLogger>("counter_log_output.csv", ";");
 
 	rootCoordinator.start();
-	rootCoordinator.simulate(10.0);
+	rootCoordinator.simulate(10.1);
 	rootCoordinator.stop();	
 
 	return 0;
