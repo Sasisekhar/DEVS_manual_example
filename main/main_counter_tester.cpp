@@ -1,4 +1,4 @@
-#include <limits> //Required for infinity
+#include <limits>
 #include "include/counter_tester.hpp"
 #include "cadmium/simulation/root_coordinator.hpp"
 #include "cadmium/simulation/logger/stdout.hpp"
@@ -12,7 +12,7 @@ int main() {
 	auto rootCoordinator = RootCoordinator(model);
 
 	rootCoordinator.setLogger<STDOUTLogger>(";");
-	// rootCoordinator.setLogger<CSVLogger>("display_log_output.csv", ";");
+	// rootCoordinator.setLogger<CSVLogger>("counter_log_output.csv", ";");
 
 	rootCoordinator.start();
 	rootCoordinator.simulate(10.1);
