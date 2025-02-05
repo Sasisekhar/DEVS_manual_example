@@ -11,8 +11,8 @@ int main() {
 	auto model = std::make_shared<counter_tester> ("counter tester");
 	auto rootCoordinator = RootCoordinator(model);
 
-	rootCoordinator.setLogger<STDOUTLogger>(";");
-	// rootCoordinator.setLogger<CSVLogger>("counter_log_output.csv", ";");
+	// rootCoordinator.setLogger<STDOUTLogger>(";");
+	rootCoordinator.setLogger<CSVLogger>("counter_test_output.csv", ";");
 
 	rootCoordinator.start();
 	rootCoordinator.simulate(10.1);
