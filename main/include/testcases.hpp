@@ -18,8 +18,8 @@ struct testcases: public Coupled {
         direction_out = addOutPort<bool>("direction out");
         
         //adding the IEStream models
-        auto increment_file = addComponent<lib::IEStream<int>>("increment file", "/absolute file path/");
-        auto countUp_file = addComponent<lib::IEStream<bool>>("countUp file", "/absolute file path/");
+        auto increment_file = addComponent<lib::IEStream<int>>("increment file", "/absolute path/");
+        auto countUp_file = addComponent<lib::IEStream<bool>>("countUp file", "/absolute path/");
 
         //performing the EOC
         addCoupling(increment_file->out, increment_out);
